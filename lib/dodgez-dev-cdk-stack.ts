@@ -42,7 +42,7 @@ export class DodgezDevCdkStack extends Stack {
               resources: [
                 this.formatArn({
                   resource: "appmonitor",
-                  resourceName: "dodgez.dev",
+                  resourceName: "www.dodgez.dev",
                   service: "rum",
                 }),
               ],
@@ -70,8 +70,8 @@ export class DodgezDevCdkStack extends Stack {
         telemetries: ["errors", "http", "performance"],
       },
       cwLogEnabled: false,
-      domain: "dodgez.dev",
-      name: "dodgez.dev",
+      domain: "www.dodgez.dev",
+      name: "www.dodgez.dev",
       customEvents: {
         status: "ENABLED",
       },
