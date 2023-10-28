@@ -1,4 +1,4 @@
-import { Stack, StackProps } from "aws-cdk-lib";
+import { NestedStack, NestedStackProps } from "aws-cdk-lib";
 import {
   CfnIdentityPool,
   CfnIdentityPoolRoleAttachment,
@@ -12,8 +12,8 @@ import {
 import { CfnAppMonitor } from "aws-cdk-lib/aws-rum";
 import { Construct } from "constructs";
 
-export class DodgezDevCdkStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
+export class RumStack extends NestedStack {
+  constructor(scope: Construct, id: string, props?: NestedStackProps) {
     super(scope, id, props);
 
     const identityPool = new CfnIdentityPool(this, "RumAppIdentityPool", {
